@@ -1,0 +1,32 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "roboto",
+        "createdAt": "2026-10-19T17:50:58.765Z",
+        "reason": "pitch-site ellie-taste.md section 2: system font stack is Ellie's house type; roboto is only the headless fallback of -apple-system"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-19T17:50:58.839Z",
+        "reason": "oat #efe5d3 is sampled from the client's own ad flyer panels (brief: only brand asset); hero/close are forest green, snow band pale blue"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-19T17:50:58.913Z",
+        "reason": "flagged .rows is a ruled list whose rows carry vertical padding by design; .close bottom is the lawn canvas running flush into the footer"
+      }
+    ]
+  }
+}
