@@ -76,11 +76,11 @@ p{margin:0}
 .top-phone{display:flex;align-items:center;gap:7px;min-height:44px;padding:0 2px;font-weight:800;font-size:16px;text-decoration:none;white-space:nowrap;font-variant-numeric:tabular-nums}
 .top-phone .icon{color:var(--amber);width:17px;height:17px}
 .top-phone:hover{color:var(--amber)}
-.hero-copy{flex:1;display:flex;flex-direction:column;justify-content:center;gap:18px;padding:12px var(--pad) 28px;max-width:1160px;width:100%;margin:0 auto}
-.hero h1{font-size:clamp(2.6rem,11.4vw,5.6rem);line-height:.93;max-width:13ch;color:#fff;text-shadow:0 2px 24px rgba(20,44,30,.6)}
+.hero-copy{flex:1;display:flex;flex-direction:column;justify-content:center;gap:18px;padding:12px var(--pad) 46px;max-width:1160px;width:100%;margin:0 auto}
+.hero h1{font-size:clamp(2.6rem,11.4vw,5.6rem);line-height:.93;max-width:13ch;text-wrap:wrap;color:#fff;text-shadow:0 2px 24px rgba(20,44,30,.6)}
 .promise{font-size:clamp(17px,4.6vw,20px);line-height:1.45;max-width:32ch;color:var(--cream)}
 .actions{display:flex;flex-direction:column;gap:12px;margin-top:4px}
-.rake-hint{position:absolute;right:var(--pad);bottom:calc(var(--lawn-h) + 4px);font-size:15px;color:var(--cream-soft);transition:opacity .6s;pointer-events:none}
+.rake-hint{position:absolute;right:var(--pad);bottom:calc(var(--lawn-h) + 16px);font-size:15px;color:var(--cream-soft);transition:opacity .6s;pointer-events:none}
 .rake-hint.gone{opacity:0}
 
 /* ---------- Bands ---------- */
@@ -648,7 +648,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       L.x += L.vx * dt; L.y += L.vy * dt; L.z += L.vz * dt; L.a += L.va * dt;
       if (L.z < 0) { L.z = 0; L.vz = 0; }
       /* nothing flies up over the words: high leaves only in the clear zone, below the header */
-      var low = Math.max(0, L.y - this.top) + 26;
+      var low = Math.max(0, L.y - this.top) + 12;
       if (L.z > low) {
         var zMax = low;
         if (cx != null && L.x > cx - 30) { if (L.x < cx) { L.x = cx; L.vx = Math.abs(L.vx); } zMax = L.y - 96; }
