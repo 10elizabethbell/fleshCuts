@@ -1,0 +1,481 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-19T18:07:56.412258+00:00",
+  "title": "Design System: FleshCuts LLC",
+  "extensions": {
+    "colorMeta": {
+      "forest": {
+        "role": "primary",
+        "displayName": "Flyer Forest",
+        "canonical": "#1c3a29",
+        "tonalRamp": [
+          "#193424",
+          "#2c5b40",
+          "#3f825c",
+          "#52aa78",
+          "#78be96",
+          "#9fd1b5",
+          "#c6e4d3",
+          "#eef7f2"
+        ]
+      },
+      "forest-deep": {
+        "role": "primary",
+        "displayName": "Night Forest",
+        "canonical": "#142c1e",
+        "tonalRamp": [
+          "#183524",
+          "#2a5d3f",
+          "#3c855b",
+          "#4fad76",
+          "#75c095",
+          "#9dd3b4",
+          "#c5e5d2",
+          "#edf7f1"
+        ]
+      },
+      "forest-hi": {
+        "role": "primary",
+        "displayName": "Lit Forest",
+        "canonical": "#26503a",
+        "tonalRamp": [
+          "#193426",
+          "#2b5b42",
+          "#3e835f",
+          "#51aa7c",
+          "#77be99",
+          "#9fd1b7",
+          "#c6e4d4",
+          "#eef7f2"
+        ]
+      },
+      "amber": {
+        "role": "secondary",
+        "displayName": "Leaf Amber",
+        "canonical": "#e49a3c",
+        "tonalRamp": [
+          "#432a09",
+          "#764910",
+          "#aa6917",
+          "#dd891f",
+          "#e7a44f",
+          "#eebe82",
+          "#f5d9b5",
+          "#fcf3e9"
+        ]
+      },
+      "amber-hi": {
+        "role": "secondary",
+        "displayName": "Sunlit Amber",
+        "canonical": "#f0ab52",
+        "tonalRamp": [
+          "#462a06",
+          "#7c4b0b",
+          "#b26b0f",
+          "#e78b14",
+          "#efa547",
+          "#f4c07c",
+          "#f8dab2",
+          "#fdf4e8"
+        ]
+      },
+      "amber-deep": {
+        "role": "secondary",
+        "displayName": "Turned Amber",
+        "canonical": "#cf8326",
+        "tonalRamp": [
+          "#41290c",
+          "#724815",
+          "#a3671e",
+          "#d48627",
+          "#e0a256",
+          "#e9bd87",
+          "#f2d8b8",
+          "#fbf3e9"
+        ]
+      },
+      "rust": {
+        "role": "tertiary",
+        "displayName": "Rust",
+        "canonical": "#a8401a",
+        "tonalRamp": [
+          "#42190a",
+          "#752c12",
+          "#a7401a",
+          "#da5322",
+          "#e47951",
+          "#eca084",
+          "#f4c7b6",
+          "#fceee9"
+        ]
+      },
+      "oat": {
+        "role": "neutral",
+        "displayName": "Oat",
+        "canonical": "#efe5d3",
+        "tonalRamp": [
+          "#382b14",
+          "#634c24",
+          "#8e6d33",
+          "#b88e43",
+          "#caa86c",
+          "#d9c197",
+          "#e9dbc2",
+          "#f8f4ec"
+        ]
+      },
+      "oat-line": {
+        "role": "neutral",
+        "displayName": "Oat Rule",
+        "canonical": "rgba(26,43,33,.16)",
+        "tonalRamp": [
+          "#1d3025",
+          "#335440",
+          "#49785c",
+          "#5f9d78",
+          "#82b496",
+          "#a6c9b5",
+          "#cbdfd3",
+          "#eff5f2"
+        ]
+      },
+      "snow": {
+        "role": "neutral",
+        "displayName": "Snow",
+        "canonical": "#eef4f7",
+        "tonalRamp": [
+          "#182b34",
+          "#2b4b5c",
+          "#3e6c83",
+          "#508dab",
+          "#77a7bf",
+          "#9ec0d2",
+          "#c6dae4",
+          "#eef4f7"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "canonical": "#f8f2e7",
+        "tonalRamp": [
+          "#3b2c11",
+          "#684e1e",
+          "#95702c",
+          "#c39239",
+          "#d2ab64",
+          "#dfc391",
+          "#ecdcbe",
+          "#f9f4eb"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#1a2b21",
+        "tonalRamp": [
+          "#1d3025",
+          "#335440",
+          "#49785c",
+          "#5f9d78",
+          "#82b496",
+          "#a6c9b5",
+          "#cbdfd3",
+          "#eff5f2"
+        ]
+      },
+      "ink-soft": {
+        "role": "neutral",
+        "displayName": "Soft Ink",
+        "canonical": "#46564c",
+        "tonalRamp": [
+          "#222a25",
+          "#3c4a42",
+          "#576a5e",
+          "#718b7a",
+          "#91a598",
+          "#b1bfb6",
+          "#d1d9d4",
+          "#f1f4f2"
+        ]
+      },
+      "cream": {
+        "role": "neutral",
+        "displayName": "Cream",
+        "canonical": "#f6efe2",
+        "tonalRamp": [
+          "#3a2c12",
+          "#674e20",
+          "#93702e",
+          "#c0923c",
+          "#d0ab66",
+          "#ddc393",
+          "#ebdcbf",
+          "#f9f4ec"
+        ]
+      },
+      "cream-soft": {
+        "role": "neutral",
+        "displayName": "Soft Cream",
+        "canonical": "#d9d2c2",
+        "tonalRamp": [
+          "#2f2a1d",
+          "#534a34",
+          "#77694a",
+          "#9b8960",
+          "#b2a484",
+          "#c8bea7",
+          "#dfd9cb",
+          "#f5f3ef"
+        ]
+      },
+      "error": {
+        "role": "neutral",
+        "displayName": "Error Brick",
+        "canonical": "#9b2c12",
+        "tonalRamp": [
+          "#451308",
+          "#79220e",
+          "#ad3114",
+          "#e1401a",
+          "#ea6a4b",
+          "#f09580",
+          "#f6c1b4",
+          "#fcece8"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Hero headline only; uppercase, white with a soft forest glow over the leaves."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Band and close headings; uppercase 900."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Service row names."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running text in the owner's first-person voice."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Buttons, form labels, Before/After labels, header phone number."
+      }
+    },
+    "shadows": [
+      {
+        "name": "photo-rest",
+        "value": "0 10px 22px -14px rgba(74,48,20,.35)",
+        "purpose": "Before/after photos."
+      },
+      {
+        "name": "card-rest",
+        "value": "0 18px 40px -24px rgba(74,48,20,.5)",
+        "purpose": "Quote form card."
+      },
+      {
+        "name": "logo-lift",
+        "value": "0 20px 44px -18px rgba(0,0,0,.55)",
+        "purpose": "Round logo on forest in the about block."
+      },
+      {
+        "name": "form-halo",
+        "value": "0 0 0 3px rgba(168,64,26,.18)",
+        "purpose": "Rust halo on form controls at hover and focus (22% on the submit button)."
+      },
+      {
+        "name": "headline-glow",
+        "value": "text-shadow: 0 2px 24px rgba(20,44,30,.6)",
+        "purpose": "Keeps the hero headline readable over the leaves."
+      }
+    ],
+    "motion": [
+      {
+        "name": "control-transition",
+        "value": ".18s (color, background, border); press scale(.98) over .12s",
+        "purpose": "Buttons, arrows, links."
+      },
+      {
+        "name": "form-transition",
+        "value": ".15s border-color, box-shadow",
+        "purpose": "Form controls."
+      },
+      {
+        "name": "yard-loop",
+        "value": "one requestAnimationFrame loop; dt capped at 50ms; IntersectionObserver pause (rootMargin 80px); reduced motion = one still frame, redrawn on resize",
+        "purpose": "All LeafLawn and SnowBank scenes."
+      },
+      {
+        "name": "yard-tunables",
+        "value": "DPR_CAP 1.5; LEAF_DENSITY 230; LEAF_MAX 650; LEAF_LEN [17,30]; LEAF_LEN_DESK [22,36]; PUSH_R 46; PUSH_R_DESK 64; REGROW [1.4,6]s; IDLE 6s; GRAVITY 380; FALL_MAX 78; SNOW_FLAKES 70; SNOW_FLAKES_DESK 170",
+        "purpose": "Named constants at the top of the engine script; tuned by hand."
+      },
+      {
+        "name": "leaf-colors",
+        "value": "#c4521f #d9822b #e2ad37 #8f2f1d #9a6430 #b8681f #c9a13a",
+        "purpose": "Leaf sprite palette (maple, oak, beech)."
+      },
+      {
+        "name": "grass-colors",
+        "value": "#2c5a2c #356b33 #3f7838 #4a8240 #27502a #5a8a45 over #2b5229 to #3b6c35",
+        "purpose": "Turf blades and gradient."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "tiny",
+        "value": "max-width: 345px"
+      },
+      {
+        "name": "short-landscape",
+        "value": "landscape and max-height: 500px"
+      },
+      {
+        "name": "tablet",
+        "value": "700px"
+      },
+      {
+        "name": "desktop",
+        "value": "1024px"
+      },
+      {
+        "name": "container",
+        "value": "1160px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Amber pill for the main action: text Brandon for a free estimate.",
+      "html": "<a class=\"ds-btn ds-btn-fill\" href=\"#\"><svg class=\"ds-icon\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path fill=\"currentColor\" d=\"M4 3h16a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H8l-4.3 3.4A1 1 0 0 1 2 20.6V5a2 2 0 0 1 2-2zm3 6.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm5 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm5 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z\"/></svg>Text me for a free estimate</a>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:.55em;min-height:56px;padding:0 22px;border-radius:999px;border:2px solid transparent;font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;font-weight:800;font-size:17px;text-decoration:none;cursor:pointer;transition:background-color .18s,color .18s,border-color .18s,transform .12s}.ds-btn:active{transform:scale(.98)}.ds-btn:focus-visible{outline:3px solid #e49a3c;outline-offset:3px}.ds-icon{width:1em;height:1em;flex:none}.ds-btn-fill{background:#e49a3c;border-color:#e49a3c;color:#1c3a29}.ds-btn-fill:hover{background:#f0ab52;border-color:#f0ab52}"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Secondary hero action on forest: cream outline, amber border on hover.",
+      "html": "<div style=\"background:#1c3a29;padding:20px\"><a class=\"ds-btn-line\" href=\"#\">Book snow shoveling</a></div>",
+      "css": ".ds-btn-line{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:0 22px;border-radius:999px;border:2px solid #d9d2c2;background:transparent;color:#f6efe2;font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;font-weight:800;font-size:17px;text-decoration:none;transition:color .18s,border-color .18s}.ds-btn-line:hover{border-color:#e49a3c;color:#fff}.ds-btn-line:focus-visible{outline:3px solid #e49a3c;outline-offset:3px}"
+    },
+    {
+      "name": "Service Rows",
+      "kind": "custom",
+      "refersTo": "service-row",
+      "description": "Ruled rows that open a pre-filled text; on hover only the arrow circle fills amber.",
+      "html": "<ul class=\"ds-rows\"><li><a class=\"ds-row\" href=\"#\"><span>Leaf &amp; brush removal</span><span class=\"ds-arrow\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M5 12h13M13 6l6 6-6 6\"/></svg></span></a></li><li><a class=\"ds-row\" href=\"#\"><span>Driveways</span><span class=\"ds-arrow\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\" d=\"M5 12h13M13 6l6 6-6 6\"/></svg></span></a></li></ul>",
+      "css": ".ds-rows{list-style:none;margin:0;padding:0;border-top:1px solid rgba(26,43,33,.16);background:#efe5d3;font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif}.ds-rows li{border-bottom:1px solid rgba(26,43,33,.16)}.ds-row{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:68px;padding:10px 0;text-decoration:none;color:#1a2b21;font-weight:800;font-size:22px;letter-spacing:-.005em}.ds-row:hover,.ds-row:focus-visible{outline:none;background:none;box-shadow:none}.ds-arrow{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;flex:none;border:2px solid rgba(26,43,33,.22);color:#1a2b21;transition:background-color .18s,border-color .18s,color .18s}.ds-arrow svg{width:18px;height:18px}.ds-row:hover .ds-arrow,.ds-row:focus-visible .ds-arrow{background:#e49a3c;border-color:#e49a3c;color:#1c3a29}.ds-row:focus-visible .ds-arrow{outline:3px solid #e49a3c;outline-offset:3px}"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input-text",
+      "description": "Form text box: white, ink border, rust border and halo on hover and focus.",
+      "html": "<label class=\"ds-field\"><span>Your town</span><input class=\"ds-input\" type=\"text\"></label>",
+      "css": ".ds-field{display:grid;gap:8px;font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;color:#1a2b21}.ds-field span{font-weight:800;font-size:17px}.ds-input{width:100%;font:inherit;font-size:17px;color:#1a2b21;background:#fff;border:2px solid rgba(26,43,33,.2);border-radius:12px;padding:13px 14px;min-height:52px;caret-color:#a8401a;transition:border-color .15s,box-shadow .15s}.ds-input:hover,.ds-input:focus{outline:none;border-color:#a8401a;box-shadow:0 0 0 3px rgba(168,64,26,.18)}"
+    },
+    {
+      "name": "Choice Chip",
+      "kind": "chip",
+      "refersTo": "choice-chip",
+      "description": "Checkbox tile in the form; pale amber when checked, rust outline on hover and focus.",
+      "html": "<label class=\"ds-chip\"><input type=\"checkbox\" checked><span>Snow shoveling</span></label> <label class=\"ds-chip\"><input type=\"checkbox\"><span>Seasonal cleanup</span></label>",
+      "css": ".ds-chip{position:relative;display:inline-block;font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;color:#1a2b21}.ds-chip input{position:absolute;opacity:0;width:1px;height:1px;margin:0}.ds-chip span{display:flex;align-items:center;gap:8px;min-height:48px;padding:0 16px;border-radius:12px;border:2px solid rgba(26,43,33,.2);background:#fff;font-weight:700;font-size:16px;cursor:pointer;transition:border-color .15s,background-color .15s,box-shadow .15s}.ds-chip span::before{content:\"\";width:18px;height:18px;border-radius:5px;border:2px solid rgba(26,43,33,.35);background:#fff}.ds-chip input:checked+span{background:#fbe8cf;border-color:#cf8326}.ds-chip input:checked+span::before{background:#1c3a29;border-color:#1c3a29}.ds-chip span:hover,.ds-chip input:focus-visible+span{border-color:#a8401a;box-shadow:0 0 0 3px rgba(168,64,26,.18)}"
+    },
+    {
+      "name": "Header",
+      "kind": "nav",
+      "refersTo": "header",
+      "description": "Brand left, phone number top right as a tel: link; the only call action on the first screen.",
+      "html": "<header class=\"ds-top\"><a class=\"ds-brand\" href=\"#\"><span class=\"ds-logo\"></span>FleshCuts</a><a class=\"ds-phone\" href=\"tel:+15706901250\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path fill=\"currentColor\" d=\"M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z\"/></svg>(570) 690-1250</a></header>",
+      "css": ".ds-top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 16px;background:#1c3a29;color:#f6efe2;font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif}.ds-top a{color:inherit;text-decoration:none}.ds-brand{display:flex;align-items:center;gap:10px;font-weight:900;font-size:19px;letter-spacing:-.01em;min-height:44px}.ds-logo{width:42px;height:42px;border-radius:50%;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.25)}.ds-phone{display:flex;align-items:center;gap:7px;min-height:44px;font-weight:800;font-size:16px;white-space:nowrap;font-variant-numeric:tabular-nums}.ds-phone svg{width:17px;height:17px;color:#e49a3c}.ds-phone:hover{color:#e49a3c}.ds-phone:focus-visible{outline:3px solid #e49a3c;outline-offset:3px}"
+    },
+    {
+      "name": "Facebook Link",
+      "kind": "button",
+      "refersTo": "facebook-link",
+      "description": "Forest pill directly under the before/after pairs: see more of the work.",
+      "html": "<a class=\"ds-more\" href=\"#\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path fill=\"currentColor\" d=\"M24 12a12 12 0 1 0-13.9 11.9v-8.4h-3V12h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v2.9h-1.5c-1.5 0-2 .9-2 1.9V12h3.4l-.5 3.5h-2.9v8.4A12 12 0 0 0 24 12z\"/></svg>Click to see more of my work.</a>",
+      "css": ".ds-more{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:64px;padding:0 24px;border-radius:999px;background:#1c3a29;color:#f6efe2;font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif;font-weight:800;font-size:18px;text-decoration:none;transition:background-color .18s}.ds-more svg{width:24px;height:24px;color:#e49a3c}.ds-more:hover{background:#26503a}.ds-more:focus-visible{outline:3px solid #e49a3c;outline-offset:3px}"
+    },
+    {
+      "name": "Before/After Pair",
+      "kind": "card",
+      "refersTo": "photo-pair",
+      "description": "Two photos at their own shape with plain labels; a leaf-covered lawn strip overlaps the bottom (canvas in the build, flat turf here).",
+      "html": "<div class=\"ds-pairset\"><div class=\"ds-pair\"><div class=\"ds-shot\"><span>Before</span><div class=\"ds-img\"></div></div><div class=\"ds-shot\"><span>After</span><div class=\"ds-img\"></div></div></div><div class=\"ds-lawn\"></div></div>",
+      "css": ".ds-pairset{background:#efe5d3;padding:16px 16px 0;font-family:-apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,\"Helvetica Neue\",Arial,sans-serif}.ds-pair{display:grid;grid-template-columns:1fr 1fr;gap:18px;position:relative;z-index:0}.ds-shot{display:flex;flex-direction:column;gap:6px}.ds-shot span{font-size:16px;font-weight:800;color:#46564c}.ds-img{aspect-ratio:712/381;border-radius:14px;background:#d8ccb6;box-shadow:0 10px 22px -14px rgba(74,48,20,.35)}.ds-lawn{position:relative;z-index:1;height:96px;margin:-34px -16px 0;background:linear-gradient(#2b5229,#3b6c35);clip-path:polygon(0 16%,100% 16%,100% 88%,0 84%)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Yard Is the Page",
+    "overview": "The page is Brandon's own October lawn, not a picture of one. The flyer's deep forest green and oat beige carry the brand; canvases of mown turf covered in maple, oak and beech leaves sit at the bottom of the hero, under every before/after pair and above the footer, and the visitor rakes them with a finger or cursor. Winter comes in as a pale-blue sky strip where snow falls, banks up and can be shovelled. Everything else stays plain so the yard can be the one living thing on the page.\n\nThe type is loud and the furniture is quiet. Headlines are heavy, uppercase and tight in the system face. Content sits on flat color bands (forest, oat, snow) separated by organic edges: a cut turf edge with a strip of soil, a wavy oat edge over the snow, a drift-shaped mask into the estimate band. Controls are few and large: one amber pill to text Brandon, one outlined pill for the second action, ruled rows of services that text him with a single tap.\n\nDensity is phone-first and generous: 56px buttons, 68px rows, 17px body, one column until 1024px, where bands split into a sticky heading column beside the content.",
+    "keyCharacteristics": [
+      "Flat color bands from the owner's flyer (forest, oat, pale blue), joined by organic, hand-cut edges rather than straight rules.",
+      "Heavy uppercase system type (900 weight, line-height under 1) for every heading; plain sentence-case body.",
+      "One amber action color, shown at rest only on the primary pill; everywhere else amber appears on hover.",
+      "A rust outline reserved for form controls.",
+      "A living yard (LeafLawn and SnowBank canvases) that plays by itself until touched and never moves under reduced motion."
+    ],
+    "rules": [
+      {
+        "name": "The Amber on Touch Rule",
+        "body": "Amber at rest is for the primary button only. Arrows, links and the phone number turn amber when hovered or focused, never by default.",
+        "section": "colors"
+      },
+      {
+        "name": "The Rust Is the Form Rule",
+        "body": "Rust outlines only form controls: text boxes, choice chips, the form's submit and copy buttons. Nothing outside the form uses rust.",
+        "section": "colors"
+      },
+      {
+        "name": "The Flyer Ground Rule",
+        "body": "Large surfaces come from the owner's flyer: forest, oat, pale blue. Don't introduce a new band color.",
+        "section": "colors"
+      },
+      {
+        "name": "The Heavy Caps Rule",
+        "body": "Every h1-h3 is 900 weight, uppercase, -0.01em, line-height under 1, balanced. Body copy is never uppercase.",
+        "section": "typography"
+      },
+      {
+        "name": "The One Family Rule",
+        "body": "No second typeface. Hierarchy comes from weight, case and size only.",
+        "section": "typography"
+      },
+      {
+        "name": "The Clear Copy Rule",
+        "body": "Nothing in the yard crosses the words. Leaves stay low over the hero copy and fly high only to the right of it, below the header.",
+        "section": "layout"
+      }
+    ],
+    "dos": [
+      "**Do** put the phone number only in the top-right corner of the header on the first screen, as a tel: link with a phone icon. The footer may repeat it.",
+      "**Do** keep at most two buttons under the hero headline: amber-fill primary, cream-outline secondary.",
+      "**Do** put the Facebook link directly under the before/after pairs as a 64px forest pill, and again in the footer.",
+      "**Do** keep service items to one to three words in ruled rows where only the arrow circle changes on hover (amber fill, focus ring on the arrow).",
+      "**Do** outline every form control in rust (2px border plus 3px halo) on hover and focus.",
+      "**Do** keep photos at their own 712:381 shape with 14px corners, plain Before/After labels and a lawn strip tucked under each pair.",
+      "**Do** tune the yard through the named constants at the top of the script, not inline numbers.",
+      "**Do** keep every animation behind the shared loop, paused off screen and drawn as a still frame under reduced motion."
+    ],
+    "donts": [
+      "**Don't** add a sticky bar at the bottom of the screen, a Call button under the hero title, or a second copy of the phone number on the first screen.",
+      "**Don't** add email links, buttons or a \"send by email\" option; contact is call or text.",
+      "**Don't** outline, tint or shadow a service row on hover.",
+      "**Don't** use rust outside the form or amber at rest outside the primary button.",
+      "**Don't** let leaves, flakes or clumps cross the hero copy; respect the height cap and the clear zone.",
+      "**Don't** add captions under the photos or an intro sentence above them.",
+      "**Don't** draw ruler-straight edges between bands; the yard's edges are cut turf, soil and drift.",
+      "**Don't** add a second typeface or set body copy in uppercase."
+    ]
+  }
+}
