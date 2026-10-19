@@ -26,6 +26,141 @@
         ],
         "createdAt": "2026-10-19T17:50:58.913Z",
         "reason": "flagged .rows is a ruled list whose rows carry vertical padding by design; .close bottom is the lawn canvas running flush into the footer"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "rgb(255, 255, 255)",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-19T18:09:48.451Z",
+        "reason": "builder: shipped one-off reviewed in the finish review; DESIGN.md documenter left it out of the system as single-use (logo disc, photo placeholder, hero glow, shadow, snow sky, placeholder ink, checkbox, body/label sizes)"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "rgb(216, 204, 182)",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-19T18:09:48.522Z",
+        "reason": "builder: shipped one-off reviewed in the finish review; DESIGN.md documenter left it out of the system as single-use (logo disc, photo placeholder, hero glow, shadow, snow sky, placeholder ink, checkbox, body/label sizes)"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "rgba(53,96,47,.5)",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-19T18:09:48.590Z",
+        "reason": "builder: shipped one-off reviewed in the finish review; DESIGN.md documenter left it out of the system as single-use (logo disc, photo placeholder, hero glow, shadow, snow sky, placeholder ink, checkbox, body/label sizes)"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "rgba(0,0,0,.25)",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-19T18:09:48.659Z",
+        "reason": "builder: shipped one-off reviewed in the finish review; DESIGN.md documenter left it out of the system as single-use (logo disc, photo placeholder, hero glow, shadow, snow sky, placeholder ink, checkbox, body/label sizes)"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#9db6c6",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-19T18:09:48.734Z",
+        "reason": "builder: shipped one-off reviewed in the finish review; DESIGN.md documenter left it out of the system as single-use (logo disc, photo placeholder, hero glow, shadow, snow sky, placeholder ink, checkbox, body/label sizes)"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#d2e1e9",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-19T18:09:48.803Z",
+        "reason": "builder: shipped one-off reviewed in the finish review; DESIGN.md documenter left it out of the system as single-use (logo disc, photo placeholder, hero glow, shadow, snow sky, placeholder ink, checkbox, body/label sizes)"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#5f6d65",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-19T18:09:48.875Z",
+        "reason": "builder: shipped one-off reviewed in the finish review; DESIGN.md documenter left it out of the system as single-use (logo disc, photo placeholder, hero glow, shadow, snow sky, placeholder ink, checkbox, body/label sizes)"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "#fbe8cf",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-19T18:09:48.946Z",
+        "reason": "builder: shipped one-off reviewed in the finish review; DESIGN.md documenter left it out of the system as single-use (logo disc, photo placeholder, hero glow, shadow, snow sky, placeholder ink, checkbox, body/label sizes)"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "16px",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-19T18:09:49.016Z",
+        "reason": "builder: shipped one-off reviewed in the finish review; DESIGN.md documenter left it out of the system as single-use (logo disc, photo placeholder, hero glow, shadow, snow sky, placeholder ink, checkbox, body/label sizes)"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "20px",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-19T18:09:49.088Z",
+        "reason": "builder: shipped one-off reviewed in the finish review; DESIGN.md documenter left it out of the system as single-use (logo disc, photo placeholder, hero glow, shadow, snow sky, placeholder ink, checkbox, body/label sizes)"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "15px",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-19T18:09:49.158Z",
+        "reason": "builder: shipped one-off reviewed in the finish review; DESIGN.md documenter left it out of the system as single-use (logo disc, photo placeholder, hero glow, shadow, snow sky, placeholder ink, checkbox, body/label sizes)"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "18px",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-19T18:09:49.232Z",
+        "reason": "builder: shipped one-off reviewed in the finish review; DESIGN.md documenter left it out of the system as single-use (logo disc, photo placeholder, hero glow, shadow, snow sky, placeholder ink, checkbox, body/label sizes)"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "1.7rem",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-19T18:09:49.302Z",
+        "reason": "builder: shipped one-off reviewed in the finish review; DESIGN.md documenter left it out of the system as single-use (logo disc, photo placeholder, hero glow, shadow, snow sky, placeholder ink, checkbox, body/label sizes)"
+      },
+      {
+        "rule": "design-system-font-size",
+        "value": "1.9rem",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-19T18:09:49.376Z",
+        "reason": "builder: shipped one-off reviewed in the finish review; DESIGN.md documenter left it out of the system as single-use (logo disc, photo placeholder, hero glow, shadow, snow sky, placeholder ink, checkbox, body/label sizes)"
+      },
+      {
+        "rule": "design-system-radius",
+        "value": "5px",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-19T18:09:49.453Z",
+        "reason": "builder: shipped one-off reviewed in the finish review; DESIGN.md documenter left it out of the system as single-use (logo disc, photo placeholder, hero glow, shadow, snow sky, placeholder ink, checkbox, body/label sizes)"
       }
     ]
   }
