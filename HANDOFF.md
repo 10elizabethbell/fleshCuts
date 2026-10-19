@@ -51,7 +51,7 @@
 ## Review notes
 - Impeccable: critique, audit, harden, optimize, adapt, polish, layout, typeset, colorize, clarify, animate, delight, bolder, quieter and distill were all run (`live`, `onboard`, `shape`, `extract` don't apply). Their recommended fixes were applied, except the ones that break the house rules (listed as rejected in their reports).
 - Finish reviewer (code-led, no comp): first verdict `fix` with 8 items. After two fix rounds all 8 were scored resolved. The final round found two small regressions (gaps in the leaf pile; the hint off the grid). I fixed both and checked them myself, with no third review round.
-- Detector: the only finding still standing is `flat-type-hierarchy` (body sizes 15–20px). Ignored with reasons in `.impeccable/config.json`: `overused-font=roboto` (system stack is house style), `cream-palette` (oat is sampled from his flyer), `cramped-padding` (ruled rows; lawn flush to the footer).
+- Detector: no findings. `flat-type-hierarchy` (body sizes 15–20px, reading sizes on a long phone page; the display headings carry the hierarchy) is recorded as an exception, along with with reasons in `.impeccable/config.json`: `overused-font=roboto` (system stack is house style), `cream-palette` (oat is sampled from his flyer), `cramped-padding` (ruled rows; lawn flush to the footer).
 - Desktop hero: the evaluate pass suggested putting a before/after on the right side. I filled it with the leaf pile instead. Say if you'd rather have the photo there.
 
 ## Not verified
