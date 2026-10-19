@@ -386,7 +386,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     if (!name) { f.name.focus(); return; }
     if (!town) { f.town.focus(); return; }
     if (!svcs.length) { f.querySelector('input[name=svc]').focus(); return; }
-    var body = 'Hi Brandon, I\'d like a free estimate.\nName: ' + name + '\nTown: ' + town + '\nNeed: ' + svcs.join(', ') + (notes ? '\nNotes: ' + notes : '') + '\nPhotos attached.';
+    var body = 'Hi Brandon, I\'d like a free estimate.\nName: ' + name + '\nTown: ' + town + '\nNeed: ' + svcs.join(', ') + (notes ? '\nNotes: ' + notes : '') + '\nI\'ll send a few photos.';
     msgEl.textContent = body; fb.hidden = false;
     location.href = window.smsHref(body);
   });
