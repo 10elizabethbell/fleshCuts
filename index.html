@@ -105,9 +105,9 @@ p{margin:0}
 .results h2{font-size:clamp(1.7rem,7vw,2.8rem)}
 .pairs{display:flex;flex-direction:column;gap:28px}
 .pair-set{position:relative}
-.pair{display:grid;gap:8px;margin:0;position:relative;z-index:0}
-.shot{position:relative;margin:0}
-.shot span{position:absolute;left:0;top:0;padding:10px 14px 18px;border-radius:var(--radius) 0 0 0;font-size:16px;font-weight:800;color:#fff;background:linear-gradient(135deg,rgba(20,44,30,.62),rgba(20,44,30,0) 70%);text-shadow:0 1px 6px rgba(0,0,0,.45);pointer-events:none}
+.pair{display:grid;gap:12px;margin:0;position:relative;z-index:0}
+.shot{display:flex;flex-direction:column;gap:6px;margin:0}
+.shot span{font-size:16px;font-weight:800;color:var(--ink-soft)}
 .shot img{width:100%;height:auto;aspect-ratio:712/381;object-fit:cover;border-radius:var(--radius);background:#d8ccb6;box-shadow:0 10px 22px -14px rgba(74,48,20,.35)}
 .pair-lawn{position:relative;z-index:1;height:96px;margin:-34px calc(var(--pad) * -1) 0}
 .pair-lawn canvas{position:absolute;inset:0;width:100%;height:100%;touch-action:pan-y;-webkit-user-select:none;user-select:none}
@@ -190,7 +190,7 @@ fieldset.field{border:0;margin:0;padding:0;min-width:0}
   :root{--pad:32px;--lawn-h:clamp(200px,34svh,320px)}
   .actions{flex-direction:row;flex-wrap:wrap}
   .actions .btn{min-width:250px}
-  .rake-hint{right:auto;left:var(--pad)}
+  .rake-hint{right:auto;left:max(var(--pad),calc((100vw - 1160px) / 2 + var(--pad)))}
   .quote{padding:32px}
   .pair{grid-template-columns:1fr 1fr;gap:18px}
   .more-work{display:inline-flex}
@@ -596,7 +596,7 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
     var pcx = this.o.clearX ? this.o.clearX() : null;
     if (pcx != null && W - pcx > 420) {
       var mid = (pcx + W) / 2, half = Math.min(190, (W - pcx) * .32), top = Math.min(140, this.top * .3), PN = 420;
-      this.pile = { x: mid, y: this.top + 26, w: half };
+      this.pile = { x: mid, y: this.top + 26, w: half, h: top };
       for (i = 0; i < PN; i++) {
         var u = rnd(-1, 1), prof = top * Math.pow(1 - u * u, .75);
         this.slots.push({ x: mid + u * half, y: this.top + rnd(14, 38), zr: prof * Math.random(), taken: true });
@@ -714,7 +714,13 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
       x.stroke();
     }
     /* shadows, then resting leaves, then leaves in the air */
-    if (this.pile) { var pw = this.pile.w * 2.5; x.globalAlpha = .55; x.drawImage(shadowSpr, this.pile.x - pw / 2, this.pile.y - 22, pw, 60); }
+    if (this.pile) {
+      var pl = this.pile, pw = pl.w * 2.5; x.globalAlpha = .55; x.drawImage(shadowSpr, pl.x - pw / 2, pl.y - 22, pw, 60);
+      /* leaf litter under the pile, so a gap between leaves never shows the sky green */
+      x.globalAlpha = 1; x.beginPath(); x.moveTo(pl.x - pl.w * .9, pl.y + 8);
+      for (var u = -.9; u <= .9001; u += .05) x.lineTo(pl.x + u * pl.w, pl.y + 4 - pl.h * .82 * Math.pow(Math.max(0, 1 - u * u), .75));
+      x.closePath(); var lg2 = x.createLinearGradient(0, pl.y - pl.h, 0, pl.y + 8); lg2.addColorStop(0, '#7a4a22'); lg2.addColorStop(1, '#4a2e17'); x.fillStyle = lg2; x.fill();
+    }
     for (i = 0; i < this.leaves.length; i++) {
       L = this.leaves[i]; if (L.wait > 0 || (L.slot && L.z <= L.zr + .5)) continue;
       var sh = L.len * (1.05 + L.z * .006), off = 1.5 + L.z * .35;
