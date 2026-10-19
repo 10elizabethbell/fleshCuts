@@ -1,0 +1,815 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FleshCuts LLC · Fall cleanups &amp; snow shoveling in Brick, NJ</title>
+<meta name="description" content="Fall cleanups and snow shoveling in Brick, NJ and surrounding communities. Leaf and brush removal, garden beds, overgrown yards, driveways, walkways and steps. Free estimates. Call or text (570) 690-1250.">
+<meta name="theme-color" content="#1c3a29">
+<link rel="icon" type="image/png" href="img/favicon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="FleshCuts LLC · Fall cleanups & snow shoveling">
+<meta property="og:description" content="Brandon clears leaves, brush and overgrown beds in Brick, NJ, and shovels driveways and walks when it snows. Free estimates.">
+<meta property="og:url" content="https://10elizabethbell.github.io/fleshCuts/">
+<meta property="og:image" content="https://10elizabethbell.github.io/fleshCuts/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<style>
+/* ---------- Tokens ---------- */
+:root{
+  --forest:#1c3a29;      /* hero, close: the flyer's deep green */
+  --forest-deep:#142c1e; /* footer */
+  --lawn:#35602f;
+  --oat:#efe5d3;         /* fall bands: the flyer's beige */
+  --oat-line:rgba(26,43,33,.16);
+  --sky:#c3d5de;
+  --snow:#eef4f7;        /* snow band: the flyer's pale blue, lifted */
+  --ink:#1a2b21;
+  --ink-soft:#46564c;
+  --cream:#f6efe2;       /* text on forest */
+  --cream-soft:#d9d2c2;
+  --amber:#e49a3c;       /* leaf amber: primary buttons, hover arrows */
+  --amber-deep:#cf8326;
+  --rust:#a8401a;        /* form outline accent */
+  --radius:14px;
+  --pad:16px;
+  --lawn-h:clamp(150px,27svh,230px);
+  --font:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+
+/* ---------- Base ---------- */
+*,*::before,*::after{box-sizing:border-box}
+html{overscroll-behavior-y:none;-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;font-family:var(--font);font-size:17px;line-height:1.5;color:var(--ink);background:var(--oat);overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+::selection{background:var(--amber);color:var(--forest)}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px}
+h1,h2,h3{font-weight:900;text-transform:uppercase;letter-spacing:-.01em;line-height:.98;margin:0;text-wrap:balance}
+h2{font-size:clamp(2rem,8.6vw,3.6rem)}
+p{margin:0}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 var(--pad)}
+.icon{width:1em;height:1em;flex:none}
+
+/* ---------- Buttons ---------- */
+.btn{display:flex;align-items:center;justify-content:center;gap:.55em;min-height:56px;padding:0 22px;border-radius:999px;border:2px solid transparent;font:inherit;font-weight:800;font-size:17px;text-decoration:none;text-align:center;cursor:pointer;transition:background-color .18s,color .18s,border-color .18s,transform .12s}
+.btn:active{transform:scale(.98)}
+.btn-fill{background:var(--amber);border-color:var(--amber);color:var(--forest)}
+.btn-fill:hover{background:#f0ab52;border-color:#f0ab52}
+.btn-line{background:transparent;border-color:var(--cream-soft);color:var(--cream)}
+.btn-line:hover{border-color:var(--amber);color:#fff}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;min-height:100svh;background:var(--forest);color:var(--cream);display:flex;flex-direction:column;padding-bottom:var(--lawn-h);isolation:isolate;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;z-index:-2;background:radial-gradient(120% 70% at 92% 0%,rgba(228,154,60,.16),transparent 60%),radial-gradient(90% 60% at 0% 100%,rgba(53,96,47,.5),transparent 70%)}
+#heroLeaves{position:absolute;inset:0;width:100%;height:100%;z-index:-1;pointer-events:none}
+.lawn-hit{position:absolute;left:0;right:0;bottom:0;height:var(--lawn-h);touch-action:none;-webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px var(--pad);max-width:1160px;width:100%;margin:0 auto}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:900;font-size:19px;letter-spacing:-.01em;min-height:44px}
+.brand img{width:42px;height:42px;border-radius:50%;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.top-phone{display:flex;align-items:center;gap:7px;min-height:44px;padding:0 2px;font-weight:800;font-size:16px;text-decoration:none;white-space:nowrap;font-variant-numeric:tabular-nums}
+.top-phone .icon{color:var(--amber);width:17px;height:17px}
+.top-phone:hover{color:var(--amber)}
+.hero-copy{flex:1;display:flex;flex-direction:column;justify-content:center;gap:18px;padding:12px var(--pad) 28px;max-width:1160px;width:100%;margin:0 auto}
+.hero h1{font-size:clamp(2.6rem,11.4vw,5.6rem);line-height:.93;max-width:11ch;color:#fff;text-shadow:0 2px 24px rgba(20,44,30,.6)}
+.promise{font-size:clamp(17px,4.6vw,20px);line-height:1.45;max-width:32ch;color:var(--cream)}
+.actions{display:flex;flex-direction:column;gap:12px;margin-top:4px}
+.rake-hint{position:absolute;right:var(--pad);bottom:calc(var(--lawn-h) + 4px);font-size:15px;color:var(--cream-soft);transition:opacity .6s;pointer-events:none}
+.rake-hint.gone{opacity:0}
+
+/* ---------- Bands ---------- */
+.band{padding:64px 0}
+.band-head{display:flex;flex-direction:column;gap:12px;margin-bottom:28px}
+.band-head p{font-size:18px;color:var(--ink-soft);max-width:44ch}
+.fall{background:var(--oat);padding-top:44px}
+.snow{background:var(--snow);padding-top:20px}
+
+/* service rows: only the arrow changes on hover */
+.rows{list-style:none;margin:0;padding:0;border-top:1px solid var(--oat-line)}
+.rows li{border-bottom:1px solid var(--oat-line)}
+.row{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:68px;padding:10px 0;text-decoration:none;font-weight:800;font-size:clamp(19px,5.2vw,24px);letter-spacing:-.005em}
+.row:hover,.row:focus-visible{outline:none;background:none;box-shadow:none}
+.arrow{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;flex:none;border:2px solid rgba(26,43,33,.22);color:var(--ink);transition:background-color .18s,border-color .18s,color .18s}
+.arrow .icon{width:18px;height:18px}
+.row:hover .arrow,.row:focus-visible .arrow{background:var(--amber);border-color:var(--amber);color:var(--forest)}
+.row:focus-visible .arrow{outline:3px solid var(--amber);outline-offset:3px}
+
+/* results */
+.results{margin-top:72px}
+.pairs{display:flex;flex-direction:column;gap:36px}
+.pair{display:grid;gap:14px;margin:0}
+.shot{display:flex;flex-direction:column;gap:8px}
+.shot span{font-size:14px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft)}
+.shot img{width:100%;height:auto;aspect-ratio:712/381;object-fit:cover;border-radius:var(--radius);background:#d8ccb6;box-shadow:0 14px 30px -14px rgba(74,48,20,.45)}
+.more-work{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:36px;min-height:64px;padding:0 24px;border-radius:999px;background:var(--forest);color:var(--cream);font-weight:800;font-size:18px;text-decoration:none;transition:background-color .18s}
+.more-work .icon{width:24px;height:24px;color:var(--amber)}
+.more-work:hover{background:#26503a}
+
+/* snow seam */
+.snow-seam{position:relative;height:118px;background:linear-gradient(#b9cdd8,#d6e4eb 80%)}
+#snowBank{position:absolute;inset:0;width:100%;height:100%;touch-action:pan-y;-webkit-user-select:none;user-select:none}
+
+/* estimate */
+.estimate{background:var(--oat);position:relative}
+.estimate::before{content:"";position:absolute;left:0;right:0;top:-1px;height:34px;background:var(--snow);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 34' preserveAspectRatio='none'%3E%3Cpath d='M0 0H1200V12C1130 26 1060 30 980 22S840 6 760 14 610 34 520 28 380 8 290 12 120 30 0 18Z'/%3E%3C/svg%3E") center/100% 100%;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 34' preserveAspectRatio='none'%3E%3Cpath d='M0 0H1200V12C1130 26 1060 30 980 22S840 6 760 14 610 34 520 28 380 8 290 12 120 30 0 18Z'/%3E%3C/svg%3E") center/100% 100%}
+.estimate .band-head{padding-top:12px}
+.steps{list-style:none;margin:0 0 40px;padding:0;display:grid;gap:18px;counter-reset:s}
+.steps li{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start;font-size:18px;line-height:1.4;counter-increment:s}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--forest);color:var(--amber);font-weight:900;font-size:19px}
+.steps li span{padding-top:9px}
+
+/* form: every control outlined in rust on hover and focus */
+.quote{display:grid;gap:22px;background:#f8f2e7;border-radius:20px;padding:22px 18px;box-shadow:0 18px 40px -24px rgba(74,48,20,.5)}
+.field{display:grid;gap:8px}
+.field label,.field legend{font-weight:800;font-size:17px;padding:0}
+.field .opt{font-weight:500;color:var(--ink-soft)}
+fieldset.field{border:0;margin:0;padding:0;min-width:0}
+.quote input[type=text],.quote textarea{width:100%;font:inherit;font-size:17px;color:var(--ink);background:#fff;border:2px solid rgba(26,43,33,.2);border-radius:12px;padding:13px 14px;min-height:52px;transition:border-color .15s,box-shadow .15s}
+.quote textarea{min-height:96px;resize:vertical}
+.quote input[type=text]:hover,.quote textarea:hover,.quote input[type=text]:focus,.quote textarea:focus{outline:none;border-color:var(--rust);box-shadow:0 0 0 3px rgba(168,64,26,.18)}
+.quote ::placeholder{color:#76837b}
+.chips{display:flex;flex-wrap:wrap;gap:10px}
+.chip{position:relative}
+.chip input{position:absolute;opacity:0;width:1px;height:1px;margin:0}
+.chip span{display:flex;align-items:center;gap:8px;min-height:48px;padding:0 16px;border-radius:12px;border:2px solid rgba(26,43,33,.2);background:#fff;font-weight:700;font-size:16px;cursor:pointer;transition:border-color .15s,background-color .15s,box-shadow .15s}
+.chip span::before{content:"";width:18px;height:18px;border-radius:5px;border:2px solid rgba(26,43,33,.35);flex:none;background:#fff center/12px no-repeat}
+.chip input:checked+span{background:#fbe8cf;border-color:var(--amber-deep)}
+.chip input:checked+span::before{background-color:var(--forest);border-color:var(--forest);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2 6.2 4.8 9 10 3' fill='none' stroke='%23e49a3c' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
+.chip span:hover,.chip input:focus-visible+span{border-color:var(--rust);box-shadow:0 0 0 3px rgba(168,64,26,.18)}
+.err{color:#9b2c12;font-size:15px;font-weight:700;min-height:0}
+.err:empty{display:none}
+.quote .btn-fill{width:100%;border-color:var(--amber)}
+.quote .btn-fill:hover,.quote .btn-fill:focus-visible{outline:none;border-color:var(--rust);box-shadow:0 0 0 3px rgba(168,64,26,.22)}
+.help{font-size:15px;color:var(--ink-soft);margin-top:-10px}
+.fallback{display:grid;gap:12px;border-top:1px solid var(--oat-line);padding-top:18px}
+.fallback[hidden]{display:none}
+.fallback pre{margin:0;white-space:pre-wrap;font:inherit;font-size:16px;background:#fff;border-radius:12px;padding:14px;border:2px solid rgba(26,43,33,.12)}
+.fallback .btn{min-height:52px;background:#fff;border-color:rgba(26,43,33,.25);color:var(--ink)}
+.fallback .btn:hover,.fallback .btn:focus-visible{outline:none;border-color:var(--rust);box-shadow:0 0 0 3px rgba(168,64,26,.18)}
+
+/* about + close */
+.close{background:var(--forest);color:var(--cream);position:relative;padding:72px 0 0}
+.about{display:grid;gap:28px;align-items:center}
+.about img{width:min(250px,64vw);height:auto;aspect-ratio:1;border-radius:50%;background:#fff;box-shadow:0 20px 44px -18px rgba(0,0,0,.55);justify-self:center}
+.about h2{color:#fff;font-size:clamp(1.9rem,8vw,3.2rem);margin-bottom:16px}
+.about p{font-size:18px;max-width:46ch;color:var(--cream)}
+.about p+p{margin-top:12px}
+.area{color:var(--amber) !important;font-weight:800}
+.cta{display:grid;gap:16px;margin-top:64px;padding-bottom:28px}
+.cta h2{color:#fff}
+.cta .sub{font-size:20px;color:var(--cream)}
+.cta .actions{margin-top:8px}
+.cta-call{display:flex;align-items:center;justify-content:center;gap:8px;min-height:48px;font-weight:800;font-size:18px;text-decoration:none;color:var(--cream);font-variant-numeric:tabular-nums}
+.cta-call .icon{color:var(--amber)}
+.cta-call:hover{color:var(--amber)}
+.close-lawn{position:relative;height:150px}
+#closeLeaves{position:absolute;inset:0;width:100%;height:100%;touch-action:pan-y;-webkit-user-select:none;user-select:none}
+
+/* footer */
+.foot{background:var(--forest-deep);color:var(--cream-soft);padding:28px 0 calc(32px + env(safe-area-inset-bottom));font-size:16px}
+.foot .wrap{display:grid;gap:14px}
+.foot-name{display:flex;align-items:center;gap:10px;font-weight:900;color:var(--cream);font-size:18px}
+.foot-name img{width:36px;height:36px;border-radius:50%;background:#fff}
+.foot-links{display:flex;flex-wrap:wrap;gap:4px 22px}
+.foot-links a{display:inline-flex;align-items:center;gap:7px;min-height:44px;text-decoration:none;color:var(--cream)}
+.foot-links a:hover{color:var(--amber)}
+.foot-links .icon{color:var(--amber)}
+
+/* ---------- Larger screens ---------- */
+@media (min-width:700px){
+  :root{--pad:32px;--lawn-h:clamp(200px,34svh,320px)}
+  .actions{flex-direction:row;flex-wrap:wrap}
+  .actions .btn{min-width:250px}
+  .quote{padding:32px}
+  .pair{grid-template-columns:1fr 1fr;gap:18px}
+  .more-work{display:inline-flex}
+  .snow-seam{height:150px}
+  .close-lawn{height:190px}
+}
+@media (min-width:1024px){
+  :root{--pad:48px}
+  .band{padding:96px 0}
+  .hero-copy{padding-top:24px;padding-bottom:40px}
+  .fall .wrap,.snow .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);column-gap:64px;align-items:start}
+  .fall .band-head,.snow .band-head{position:sticky;top:32px}
+  .results{grid-column:1/-1}
+  .estimate .wrap{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:64px;align-items:start}
+  .about{grid-template-columns:auto 1fr;gap:56px;justify-content:start}
+  .about img{width:280px}
+  .cta{grid-template-columns:1fr auto;align-items:end;column-gap:48px}
+  .cta .actions{grid-row:1/3;grid-column:2;flex-direction:column;align-items:stretch}
+}
+</style>
+</head>
+<body>
+<!--
+THESIS: The yard is the page. You rake FleshCuts' own leaves off the hero lawn with a finger, instead of looking at a stock lawn photo with a services grid under it.
+OWN-WORLD: The flyer's deep forest green and oat beige, lifted into October: a mown, edged lawn covered in maple, oak and beech leaves (rust, amber, gold, maroon), heavy uppercase system type, amber pill buttons, plain ruled service rows with an arrow circle. Winter enters as a sky strip where snow falls and banks up, and you shovel it.
+STORY: A Brick neighbor sees it's Brandon, a local guy who does fall cleanups and snow, sees his real before/afters, and texts him a town and photos.
+FIRST VIEWPORT: Phone: logo + name left, (570) 690-1250 top-right; "Your yard, ready for winter." in huge type; one promise line; "Text me for a free estimate" (amber, full width), "Book snow shoveling" (outlined); the leaf-covered lawn fills the bottom ~quarter, raked by an unseen gust until touched.
+FORM: Leaf-covered lawn, 1 of 7 on my list (pitch-site skill picks by brand + touchable material; seed 85bf685e assigned #6, recorded in HANDOFF).
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
+-->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></symbol>
+  <symbol id="i-text" viewBox="0 0 24 24"><path fill="currentColor" d="M4 3h16a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H8l-4.3 3.4A1 1 0 0 1 2 20.6V5a2 2 0 0 1 2-2zm3 6.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm5 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3zm5 0a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M5 12h13M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-fb" viewBox="0 0 24 24"><path fill="currentColor" d="M24 12a12 12 0 1 0-13.9 11.9v-8.4h-3V12h3V9.4c0-3 1.8-4.7 4.5-4.7 1.3 0 2.7.2 2.7.2v2.9h-1.5c-1.5 0-2 .9-2 1.9V12h3.4l-.5 3.5h-2.9v8.4A12 12 0 0 0 24 12z"/></symbol>
+</svg>
+
+<section class="hero" id="top">
+  <canvas id="heroLeaves" aria-hidden="true"></canvas>
+  <header class="top">
+    <a class="brand" href="#top"><img src="img/logo-112.webp" width="42" height="42" alt="">FleshCuts</a>
+    <a class="top-phone" href="tel:+15706901250"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>(570) 690-1250</a>
+  </header>
+  <div class="hero-copy">
+    <h1>Your yard, ready for winter.</h1>
+    <p class="promise">I'm Brandon, your neighbor in Brick. I'll leave your yard the way I'd want mine: cleared, cleaned up, and ready for snow.</p>
+    <div class="actions">
+      <a class="btn btn-fill" href="sms:+15706901250" data-body="Hi Brandon, I'd like a free estimate for a fall cleanup. My town is "><svg class="icon" aria-hidden="true"><use href="#i-text"/></svg>Text me for a free estimate</a>
+      <a class="btn btn-line" href="sms:+15706901250" data-body="Hi Brandon, I'd like to book snow shoveling this winter. My town is ">Book snow shoveling</a>
+    </div>
+  </div>
+  <p class="rake-hint" aria-hidden="true">Drag across the lawn</p>
+  <div class="lawn-hit" aria-hidden="true"></div>
+</section>
+
+<section class="band fall" id="fall">
+  <div class="wrap">
+    <div class="band-head">
+      <h2>Fall cleanups</h2>
+      <p>Tap one to text me about it.</p>
+    </div>
+    <ul class="rows">
+      <li><a class="row" href="sms:+15706901250" data-body="Hi Brandon, I'd like a free estimate for leaf &amp; brush removal. My town is "><span>Leaf &amp; brush removal</span><span class="arrow"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></a></li>
+      <li><a class="row" href="sms:+15706901250" data-body="Hi Brandon, I'd like a free estimate for cleaning up my garden beds and overgrowth. My town is "><span>Garden beds &amp; overgrowth</span><span class="arrow"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></a></li>
+      <li><a class="row" href="sms:+15706901250" data-body="Hi Brandon, I'd like a free estimate for a seasonal property cleanup. My town is "><span>Seasonal property cleanups</span><span class="arrow"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></a></li>
+    </ul>
+    <div class="results" id="results">
+      <div class="band-head"><h2>Cleanup results</h2></div>
+      <div class="pairs">
+        <figure class="pair">
+          <div class="shot"><span>Before</span><img src="img/before-01.webp" width="712" height="381" loading="lazy" decoding="async" alt="Back yard overgrown with ivy and shrubs up to the fence"></div>
+          <div class="shot"><span>After</span><img src="img/after-01.webp" width="712" height="381" loading="lazy" decoding="async" alt="The same yard cleared down to bare ground, fence and trees left standing"></div>
+        </figure>
+        <figure class="pair">
+          <div class="shot"><span>Before</span><img src="img/before-02.webp" width="712" height="381" loading="lazy" decoding="async" alt="Side yard beside a red shed, crowded with brush and piled logs"></div>
+          <div class="shot"><span>After</span><img src="img/after-02.webp" width="712" height="381" loading="lazy" decoding="async" alt="The same side yard cleared and raked, shed and boats in view"></div>
+        </figure>
+      </div>
+      <a class="more-work" href="https://www.facebook.com/profile.php?id=100013901800362" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-fb"/></svg>Click to see more of my work.</a>
+    </div>
+  </div>
+</section>
+
+<div class="snow-seam" aria-hidden="true"><canvas id="snowBank"></canvas></div>
+
+<section class="band snow" id="snow">
+  <div class="wrap">
+    <div class="band-head">
+      <h2>Snow shoveling</h2>
+      <p>Book now, and when the snow comes I'll clear the way to your door.</p>
+    </div>
+    <ul class="rows">
+      <li><a class="row" href="sms:+15706901250" data-body="Hi Brandon, I'd like to book snow shoveling for my driveway. My town is "><span>Driveways</span><span class="arrow"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></a></li>
+      <li><a class="row" href="sms:+15706901250" data-body="Hi Brandon, I'd like to book snow shoveling for my walkways and sidewalk. My town is "><span>Walkways &amp; sidewalks</span><span class="arrow"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></a></li>
+      <li><a class="row" href="sms:+15706901250" data-body="Hi Brandon, I'd like to book snow shoveling for my steps and entryway. My town is "><span>Steps &amp; entryways</span><span class="arrow"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg></span></a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="band estimate" id="estimate">
+  <div class="wrap">
+    <div>
+      <div class="band-head">
+        <h2>Free estimates</h2>
+        <p>Competitive prices, and I'll price match.</p>
+      </div>
+      <ol class="steps">
+        <li><span>Text me your town and a few photos of the yard.</span></li>
+        <li><span>I'll text you back a free estimate.</span></li>
+        <li><span>I show up, do the work, and leave it clean.</span></li>
+      </ol>
+    </div>
+    <form class="quote" id="quote" novalidate>
+      <div class="field">
+        <label for="q-name">Your name</label>
+        <input type="text" id="q-name" name="name" autocomplete="name" required>
+        <p class="err" id="e-name"></p>
+      </div>
+      <div class="field">
+        <label for="q-town">Your town</label>
+        <input type="text" id="q-town" name="town" autocomplete="address-level2" placeholder="Brick" required>
+        <p class="err" id="e-town"></p>
+      </div>
+      <fieldset class="field">
+        <legend>What do you need?</legend>
+        <div class="chips">
+          <label class="chip"><input type="checkbox" name="svc" value="Leaf & brush removal"><span>Leaf &amp; brush removal</span></label>
+          <label class="chip"><input type="checkbox" name="svc" value="Garden beds & overgrowth"><span>Garden beds &amp; overgrowth</span></label>
+          <label class="chip"><input type="checkbox" name="svc" value="Seasonal property cleanup"><span>Seasonal cleanup</span></label>
+          <label class="chip"><input type="checkbox" name="svc" value="Snow shoveling"><span>Snow shoveling</span></label>
+        </div>
+        <p class="err" id="e-svc"></p>
+      </fieldset>
+      <div class="field">
+        <label for="q-notes">Anything I should know? <span class="opt">(optional)</span></label>
+        <textarea id="q-notes" name="notes"></textarea>
+      </div>
+      <button class="btn btn-fill" type="submit"><svg class="icon" aria-hidden="true"><use href="#i-text"/></svg>Text this to Brandon</button>
+      <p class="help">Opens a text to (570) 690-1250 with this filled in. Add a few photos of the yard before you send it.</p>
+      <div class="fallback" id="fallback" hidden>
+        <p>If your text app didn't open, send this to <a href="tel:+15706901250">(570) 690-1250</a>:</p>
+        <pre id="fb-msg"></pre>
+        <button class="btn" type="button" id="copy">Copy message</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section class="close" id="about">
+  <div class="wrap">
+    <div class="about">
+      <img src="img/logo-480.webp" width="480" height="480" loading="lazy" decoding="async" alt="FleshCuts logo: a drawing of Brandon mowing a lawn, his dachshund beside him in a propeller cap">
+      <div>
+        <h2>Hi neighbors, I'm Brandon.</h2>
+        <p>I've done landscaping for over 8 years, and I work full time in grounds and maintenance for Brick Public Schools. FleshCuts is how I take care of my neighbors' yards, the same way.</p>
+        <p class="area">Serving Brick and surrounding communities.</p>
+      </div>
+    </div>
+    <div class="cta">
+      <h2>Book your fall cleanup now.</h2>
+      <p class="sub">Plan ahead for snow.</p>
+      <div class="actions">
+        <a class="btn btn-fill" href="sms:+15706901250" data-body="Hi Brandon, I'd like a free estimate. My town is "><svg class="icon" aria-hidden="true"><use href="#i-text"/></svg>Text me for a free estimate</a>
+        <a class="cta-call" href="tel:+15706901250"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Or call (570) 690-1250</a>
+      </div>
+    </div>
+  </div>
+  <div class="close-lawn" aria-hidden="true"><canvas id="closeLeaves"></canvas></div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="foot-name"><img src="img/logo-112.webp" width="36" height="36" alt="" loading="lazy">FleshCuts LLC</div>
+    <p>Fall cleanups and snow shoveling · Brick, NJ and surrounding communities</p>
+    <div class="foot-links">
+      <a href="tel:+15706901250"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>(570) 690-1250</a>
+      <a href="https://www.facebook.com/profile.php?id=100013901800362" rel="noopener"><svg class="icon" aria-hidden="true"><use href="#i-fb"/></svg>Facebook</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ---------- Text links: pre-filled message bodies ---------- */
+(function(){
+  var NUM = '+15706901250';
+  window.smsHref = function(body){ return 'sms:' + NUM + '?&body=' + encodeURIComponent(body); };
+  document.querySelectorAll('[data-body]').forEach(function(a){ a.href = window.smsHref(a.getAttribute('data-body')); });
+})();
+
+/* ---------- Quote form: composes a text ---------- */
+(function(){
+  var f = document.getElementById('quote'); if (!f) return;
+  var fb = document.getElementById('fallback'), msgEl = document.getElementById('fb-msg');
+  function err(id, t){ document.getElementById(id).textContent = t; }
+  f.addEventListener('submit', function(e){
+    e.preventDefault();
+    var name = f.name.value.trim(), town = f.town.value.trim(), notes = f.notes.value.trim();
+    var svcs = [].slice.call(f.querySelectorAll('input[name=svc]:checked')).map(function(i){ return i.value; });
+    err('e-name', name ? '' : 'Add your name so I know who\'s texting.');
+    err('e-town', town ? '' : 'Add your town so I know where the yard is.');
+    err('e-svc', svcs.length ? '' : 'Pick at least one.');
+    if (!name) { f.name.focus(); return; }
+    if (!town) { f.town.focus(); return; }
+    if (!svcs.length) { f.querySelector('input[name=svc]').focus(); return; }
+    var body = 'Hi Brandon, I\'d like a free estimate.\nName: ' + name + '\nTown: ' + town + '\nNeed: ' + svcs.join(', ') + (notes ? '\nNotes: ' + notes : '') + '\nPhotos attached.';
+    msgEl.textContent = body; fb.hidden = false;
+    location.href = window.smsHref(body);
+  });
+  f.addEventListener('input', function(e){
+    var t = e.target;
+    if (t.name === 'name' && t.value.trim()) err('e-name', '');
+    if (t.name === 'town' && t.value.trim()) err('e-town', '');
+    if (t.name === 'svc') err('e-svc', '');
+  });
+  document.getElementById('copy').addEventListener('click', function(){
+    var b = this, txt = msgEl.textContent;
+    function done(){ b.textContent = 'Copied'; setTimeout(function(){ b.textContent = 'Copy message'; }, 1800); }
+    if (navigator.clipboard) navigator.clipboard.writeText(txt).then(done, function(){ b.textContent = 'Press and hold the message to copy'; });
+    else b.textContent = 'Press and hold the message to copy';
+  });
+})();
+
+/* ---------- Living yard: leaves you rake, snow you shovel ---------- */
+(function(){
+  'use strict';
+  /* Tunables */
+  var DPR_CAP = 1.5;
+  var LEAF_DENSITY = 230;      /* lawn px² per leaf (lower = more leaves) */
+  var LEAF_MAX = 650;
+  var LEAF_LEN = [17, 30];     /* phone leaf length range, px */
+  var LEAF_LEN_DESK = [22, 36];
+  var PUSH_R = 46, PUSH_R_DESK = 64;
+  var REGROW = [1.4, 6];       /* seconds before a raked-off leaf drifts back */
+  var IDLE = 6;                /* seconds of no touch before the gust rakes on its own */
+  var GRAVITY = 380, FALL_MAX = 78;
+  var SNOW_FLAKES = 70, SNOW_FLAKES_DESK = 170;
+  var LEAF_COLORS = ['#c4521f','#d9822b','#e2ad37','#8f2f1d','#9a6430','#b8681f','#c9a13a'];
+  var GRASS = ['#2c5a2c','#356b33','#3f7838','#4a8240','#27502a','#5a8a45'];
+
+  var reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var css = getComputedStyle(document.documentElement);
+  function v(n){ return css.getPropertyValue(n).trim(); }
+  function rnd(a, b){ return a + Math.random() * (b - a); }
+  function isDesk(){ return innerWidth >= 700; }
+
+  /* ---- Leaf sprites: maple, oak, beech in each color, front and back ---- */
+  var SPR = 64;
+  function outline(shape){
+    var pts = [], i, t, w;
+    if (shape === 0) { /* maple, right half from tip to stem */
+      var m = [[0,-1],[.1,-.76],[.26,-.84],[.21,-.52],[.47,-.6],[.64,-.74],[.6,-.44],[.95,-.36],[.7,-.18],[.8,.02],[.46,.04],[.52,.25],[.19,.2],[.07,.4],[0,.42]];
+      for (i = 0; i < m.length; i++) pts.push(m[i]);
+      for (i = m.length - 2; i > 0; i--) pts.push([-m[i][0], m[i][1]]);
+      return pts;
+    }
+    var N = 28, half = [];
+    for (i = 0; i <= N; i++) {
+      t = i / N;
+      if (shape === 1) w = .42 * Math.pow(Math.sin(Math.PI * t), .8) * (.62 + .38 * Math.abs(Math.cos(t * Math.PI * 4.5)));
+      else w = .36 * Math.pow(Math.sin(Math.PI * Math.pow(t, .85)), .9) * (1 + .04 * Math.sin(t * 60));
+      half.push([w, -1 + t * 1.84]);
+    }
+    for (i = 0; i < half.length; i++) pts.push(half[i]);
+    for (i = half.length - 2; i > 0; i--) pts.push([-half[i][0], half[i][1]]);
+    return pts;
+  }
+  function shade(hex, k){
+    var n = parseInt(hex.slice(1), 16), r = n >> 16, g = n >> 8 & 255, b = n & 255;
+    function c(x){ return Math.max(0, Math.min(255, Math.round(k > 0 ? x + (255 - x) * k : x * (1 + k)))); }
+    return 'rgb(' + c(r) + ',' + c(g) + ',' + c(b) + ')';
+  }
+  function makeSprite(shape, color, back){
+    var c = document.createElement('canvas'); c.width = c.height = SPR;
+    var x = c.getContext('2d'), s = SPR * .46, pts = outline(shape), i;
+    x.translate(SPR / 2, SPR / 2);
+    x.beginPath(); x.moveTo(pts[0][0] * s, pts[0][1] * s);
+    for (i = 1; i < pts.length; i++) x.lineTo(pts[i][0] * s, pts[i][1] * s);
+    x.closePath();
+    var g = x.createLinearGradient(-s, -s, s, s);
+    var base = back ? shade(color, .28) : color;
+    g.addColorStop(0, shade(base, .14)); g.addColorStop(.55, base); g.addColorStop(1, shade(base, -.28));
+    x.fillStyle = g; x.lineJoin = 'round'; x.fill();
+    x.strokeStyle = shade(base, -.35); x.lineWidth = 1; x.stroke();
+    /* veins */
+    x.save(); x.clip();
+    x.strokeStyle = back ? shade(base, .3) : shade(base, -.3); x.globalAlpha = .7; x.lineWidth = 1.2;
+    x.beginPath(); x.moveTo(0, .42 * s); x.lineTo(0, -.92 * s);
+    if (shape === 0) { [[.62,-.7],[-.62,-.7],[.92,-.34],[-.92,-.34],[.6,.12],[-.6,.12]].forEach(function(p){ x.moveTo(0, .2 * s); x.lineTo(p[0] * s, p[1] * s); }); }
+    else { for (i = 0; i < 5; i++) { var yy = (-.7 + i * .3) * s; x.moveTo(0, yy + .1 * s); x.lineTo(.34 * s, yy - .08 * s); x.moveTo(0, yy + .1 * s); x.lineTo(-.34 * s, yy - .08 * s); } }
+    x.stroke(); x.restore();
+    /* stem */
+    x.strokeStyle = shade(base, -.4); x.lineWidth = 1.6; x.beginPath(); x.moveTo(0, .4 * s); x.lineTo(.05 * s, .62 * s); x.stroke();
+    return c;
+  }
+  var sprites = [];
+  LEAF_COLORS.forEach(function(col){ for (var sh = 0; sh < 3; sh++) sprites.push({ f: makeSprite(sh, col, false), b: makeSprite(sh, col, true) }); });
+  var shadowSpr = (function(){
+    var c = document.createElement('canvas'); c.width = c.height = SPR;
+    var x = c.getContext('2d'), g = x.createRadialGradient(SPR/2, SPR/2, 0, SPR/2, SPR/2, SPR/2);
+    g.addColorStop(0, 'rgba(10,30,12,.55)'); g.addColorStop(1, 'rgba(10,30,12,0)');
+    x.fillStyle = g; x.fillRect(0, 0, SPR, SPR); return c;
+  })();
+
+  /* ---- Shared pointer (client coords; each scene converts every frame) ---- */
+  var P = { x: -1e4, y: -1e4, type: 'mouse', t: -1e4, down: false };
+  function now(){ return performance.now() / 1000; }
+  addEventListener('pointermove', function(e){ P.x = e.clientX; P.y = e.clientY; P.type = e.pointerType; P.t = now(); }, { passive: true });
+  addEventListener('pointerdown', function(e){ P.x = e.clientX; P.y = e.clientY; P.type = e.pointerType; P.t = now(); P.down = true; }, { passive: true });
+  ['pointerup','pointercancel'].forEach(function(n){ addEventListener(n, function(e){ P.down = false; if (e.pointerType !== 'mouse') P.t = -1e4; }, { passive: true }); });
+  addEventListener('touchmove', function(e){ var t = e.touches[0]; if (t) { P.x = t.clientX; P.y = t.clientY; P.type = 'touch'; P.t = now(); } }, { passive: true });
+  function pointerLive(){ var a = now() - P.t; return P.type === 'mouse' ? a < .15 : (P.down && a < .5); }
+
+  /* ---- Canvas helper: resize only when the rounded size really changes ---- */
+  function fit(scene){
+    var r = scene.cv.getBoundingClientRect(), W = Math.round(r.width), H = Math.round(r.height);
+    if (W === scene.W && H === scene.H) return false;
+    var d = Math.min(devicePixelRatio || 1, DPR_CAP);
+    scene.W = W; scene.H = H; scene.d = d;
+    scene.cv.width = Math.round(W * d); scene.cv.height = Math.round(H * d);
+    return true;
+  }
+
+  /* ---- Leaf lawn scene ---- */
+  function LeafLawn(cv, o){
+    this.cv = cv; this.o = o; this.x = cv.getContext('2d');
+    this.leaves = []; this.tips = []; this.W = 0; this.H = 0; this.d = 1;
+    this.prev = null; this.lastUser = -1e4; this.gustT = rnd(0, 20); this.visible = true;
+    this.build();
+  }
+  LeafLawn.prototype.build = function(){
+    if (!fit(this) && this.grass) return;
+    var W = this.W, H = this.H, d = this.d, o = this.o;
+    this.lawnH = o.lawnH ? o.lawnH(W, H) : H;
+    this.top = H - this.lawnH;
+    this.edge = o.edgeColor ? 14 : 0;
+    this.y0 = this.top + 8; this.y1 = H - this.edge - 6;
+    /* turf: mown stripes, thousands of blades, a cut edge into the next band */
+    var TIP = 16, gh = this.lawnH + TIP;
+    var g = document.createElement('canvas'); g.width = Math.round(W * d); g.height = Math.round(gh * d);
+    var x = g.getContext('2d'); x.scale(d, d);
+    var edgeY = function(px){ return gh - 14 + 4 * Math.sin(px * .011 + 1) + 2.5 * Math.sin(px * .031); };
+    x.save(); x.beginPath(); x.moveTo(0, TIP); x.lineTo(W, TIP);
+    if (this.edge) { x.lineTo(W, edgeY(W)); for (var ex = W; ex >= 0; ex -= 8) x.lineTo(ex, edgeY(ex)); x.lineTo(0, edgeY(0)); } else { x.lineTo(W, gh); x.lineTo(0, gh); }
+    x.closePath(); x.clip();
+    var lg = x.createLinearGradient(0, TIP, 0, gh); lg.addColorStop(0, '#2b5229'); lg.addColorStop(1, '#3b6c35');
+    x.fillStyle = lg; x.fillRect(0, 0, W, gh);
+    x.globalAlpha = .07; x.fillStyle = '#d8f0a8';
+    for (var sx = -gh; sx < W + gh; sx += 92) { x.beginPath(); x.moveTo(sx, TIP); x.lineTo(sx + 46, TIP); x.lineTo(sx + 46 + gh * .35, gh); x.lineTo(sx + gh * .35, gh); x.fill(); }
+    x.globalAlpha = 1;
+    var n = Math.round(W * this.lawnH / 9), i;
+    for (i = 0; i < n; i++) {
+      var bx = Math.random() * W, by = TIP + Math.random() * (gh - TIP), len = rnd(4, 10), lean = rnd(-.45, .45);
+      x.strokeStyle = GRASS[(Math.random() * GRASS.length) | 0]; x.globalAlpha = rnd(.45, .95); x.lineWidth = rnd(.8, 1.5);
+      x.beginPath(); x.moveTo(bx, by); x.quadraticCurveTo(bx + lean * len * .4, by - len * .6, bx + lean * len, by - len); x.stroke();
+    }
+    x.restore();
+    if (this.edge) {
+      /* edged bed: a strip of dark soil along the cut, then the next band */
+      x.beginPath(); x.moveTo(0, edgeY(0)); for (ex = 0; ex <= W; ex += 8) x.lineTo(ex, edgeY(ex)); x.lineTo(W, edgeY(W)); x.lineTo(W, gh); x.lineTo(0, gh); x.closePath();
+      x.fillStyle = '#4a321e'; x.fill();
+      x.beginPath(); x.moveTo(0, edgeY(0) + 4); for (ex = 0; ex <= W; ex += 8) x.lineTo(ex, edgeY(ex) + 4 + 1.2 * Math.sin(ex * .2)); x.lineTo(W, edgeY(W) + 4); x.lineTo(W, gh); x.lineTo(0, gh); x.closePath();
+      x.fillStyle = o.edgeColor; x.fill();
+    }
+    this.grass = g; this.TIP = TIP;
+    /* swaying tips along the top edge */
+    this.tips = [];
+    for (i = 0; i < W / 3; i++) this.tips.push({ x: Math.random() * W, h: rnd(7, 17), c: (Math.random() * 3) | 0, ph: rnd(0, 6.3), b: 0, bv: 0 });
+    /* leaves */
+    var count = Math.min(LEAF_MAX, Math.round(W * (this.y1 - this.y0) / LEAF_DENSITY * (o.density || 1)));
+    var LEN = isDesk() ? LEAF_LEN_DESK : LEAF_LEN;
+    this.leaves = [];
+    for (i = 0; i < count; i++) this.leaves.push({
+      x: Math.random() * W, y: rnd(this.y0, this.y1), z: 0, vx: 0, vy: 0, vz: 0,
+      a: rnd(0, 6.3), va: 0, f: Math.random() < .25 ? Math.PI : 0, fd: Math.random() < .5 ? 1 : -1,
+      len: rnd(LEN[0], LEN[1]), s: (Math.random() * sprites.length) | 0, ph: rnd(0, 6.3), wait: 0, fade: 1
+    });
+    this.prev = null;
+  };
+  LeafLawn.prototype.respawn = function(L){
+    var W = this.W;
+    L.wait = rnd(REGROW[0], REGROW[1]);
+    L.y = rnd(this.y0, this.y1); L.vx = rnd(-20, 20); L.vy = 0; L.vz = -30; L.va = rnd(-3, 3); L.fade = 0;
+    var clearX = this.cx;
+    if (clearX != null && Math.random() < .6) { L.x = rnd(clearX, W); L.z = L.y - rnd(96, 150); }
+    else { L.x = Math.random() * W; L.z = L.y - this.top + rnd(10, 30); }
+  };
+  LeafLawn.prototype.step = function(dt, t){
+    this.build();
+    var W = this.W, H = this.H, i, L;
+    /* pointer in scene coords, read from the live rect every frame */
+    var r = this.cv.getBoundingClientRect(), px = null, py = null, pvx = 0, pvy = 0, R = isDesk() ? PUSH_R_DESK : PUSH_R, user = false;
+    if (pointerLive()) {
+      var lx = P.x - r.left, ly = P.y - r.top;
+      if (lx > -R && lx < W + R && ly > this.top - 30 && ly < H + 10) { px = lx; py = ly; user = true; this.lastUser = t; if (this.o.onTouch) this.o.onTouch(); }
+    }
+    if (px === null && !reduced && this.o.autoplay && t - this.lastUser > IDLE) {
+      /* an unseen gust rakes across the lawn until someone touches it */
+      this.gustT += dt;
+      var gt = this.gustT;
+      px = W * (.5 + .56 * Math.sin(gt * .55)); py = this.top + this.lawnH * (.5 + .32 * Math.sin(gt * 1.37 + 1));
+      R *= .85;
+    }
+    if (px !== null && this.prev) { pvx = (px - this.prev[0]) / dt; pvy = (py - this.prev[1]) / dt; }
+    this.prev = px === null ? null : [px, py];
+    if (this.o.clearX && t - (this.cxT || 0) > .5) { this.cx = this.o.clearX(); this.cxT = t; }
+    var cx = this.cx == null ? null : this.cx;
+    /* desktop: leaves keep drifting down through the empty right side of the hero */
+    if (!reduced && cx != null && Math.random() < dt * 2.2) { L = this.leaves[(Math.random() * this.leaves.length) | 0]; if (L && !L.wait && L.z === 0) { L.x = rnd(cx, W); L.z = L.y - rnd(96, 150); L.vz = -20; L.vx = rnd(-15, 15); L.fade = 0; } }
+    var speed = Math.sqrt(pvx * pvx + pvy * pvy);
+    if (speed > 2500) { pvx *= 2500 / speed; pvy *= 2500 / speed; speed = 2500; }
+    var R2 = R * R, active = px !== null && (speed > 12 || (user && P.down));
+    var fr = Math.exp(-7 * dt), ar = Math.exp(-1.3 * dt), vr = Math.exp(-5 * dt);
+    for (i = 0; i < this.leaves.length; i++) {
+      L = this.leaves[i];
+      if (L.wait > 0) { L.wait -= dt; continue; }
+      if (L.fade < 1) L.fade = Math.min(1, L.fade + dt * 2.5);
+      if (active) {
+        var dx = L.x - px, dy = (L.y - L.z) - py, d2 = dx * dx + dy * dy;
+        if (d2 < R2) {
+          var dd = Math.sqrt(d2) || 1, k = 1 - dd / R;
+          L.vx += (dx / dd) * k * 70 + pvx * .3 * k;
+          L.vy += (dy / dd) * k * 40 + pvy * .22 * k;
+          L.vz += k * (60 + Math.min(speed, 1200) * .16);
+          L.va += rnd(-1, 1) * k * 14;
+        }
+      }
+      if (L.z > 0 || L.vz > 0) {
+        L.vz -= GRAVITY * dt; if (L.vz < -FALL_MAX) L.vz = -FALL_MAX;
+        L.vx += Math.sin(t * 3.8 + L.ph) * 46 * dt; L.vy += Math.cos(t * 2.9 + L.ph) * 14 * dt;
+        L.vx *= ar; L.vy *= ar;
+        L.f += (3 + Math.abs(L.vz) * .03) * dt * L.fd;
+      } else {
+        L.vx *= fr; L.vy *= fr;
+        var tgt = Math.round(L.f / Math.PI) * Math.PI; L.f += (tgt - L.f) * Math.min(1, dt * 9);
+      }
+      L.va *= vr;
+      L.x += L.vx * dt; L.y += L.vy * dt; L.z += L.vz * dt; L.a += L.va * dt;
+      if (L.z < 0) { L.z = 0; L.vz = 0; }
+      /* nothing flies up over the words: high leaves only in the clear zone, below the header */
+      var low = L.y - this.top + 26;
+      if (L.z > low) {
+        var zMax = low;
+        if (cx != null && L.x > cx - 30) { if (L.x < cx) { L.x = cx; L.vx = Math.abs(L.vx); } zMax = L.y - 96; }
+        if (L.z > zMax) { L.z = zMax; if (L.vz > 0) L.vz = 0; }
+      }
+      if (L.y < this.y0) { L.y = this.y0; L.vy = Math.abs(L.vy) * .3; }
+      if (L.y > this.y1) { L.y = this.y1; L.vy = -Math.abs(L.vy) * .3; }
+      if (L.x < -40 || L.x > W + 40) this.respawn(L);
+    }
+    /* a breeze nudges a few resting leaves so the lawn never sits still */
+    if (!reduced && Math.random() < dt * 4) { L = this.leaves[(Math.random() * this.leaves.length) | 0]; if (L && !L.wait) { L.vx += rnd(-30, 50); L.va += rnd(-2, 2); } }
+    /* grass tips bend away from the pointer and spring back */
+    for (i = 0; i < this.tips.length; i++) {
+      var T = this.tips[i];
+      if (active) { var tdx = T.x - px, tdy = this.top - py; if (tdx * tdx + tdy * tdy < R2 * 1.4) T.bv += (tdx > 0 ? 1 : -1) * 90 * dt * 60 * (1 - Math.abs(tdx) / R) * .05 + pvx * .002; }
+      T.bv += (-38 * T.b - 6.5 * T.bv) * dt; T.b += T.bv * dt;
+      if (T.b > 9) T.b = 9; if (T.b < -9) T.b = -9;
+    }
+    this.draw(t);
+  };
+  LeafLawn.prototype.draw = function(t){
+    var x = this.x, d = this.d, W = this.W, H = this.H, i, L;
+    x.setTransform(1, 0, 0, 1, 0, 0); x.clearRect(0, 0, this.cv.width, this.cv.height);
+    x.drawImage(this.grass, 0, Math.round((this.top - this.TIP) * d));
+    /* tips */
+    x.setTransform(d, 0, 0, d, 0, 0); x.lineWidth = 1.3; x.lineCap = 'round';
+    for (var c = 0; c < 3; c++) {
+      x.strokeStyle = ['#2f5e2e', '#3f7838', '#285027'][c]; x.beginPath();
+      for (i = 0; i < this.tips.length; i++) {
+        var T = this.tips[i]; if (T.c !== c) continue;
+        var sw = reduced ? 0 : Math.sin(t * 1.7 + T.x * .03) * 1.6 + Math.sin(t * .8 + T.ph) * 1.2;
+        var bx = T.x, by = this.top + 3, tx = bx + sw + T.b;
+        x.moveTo(bx, by); x.quadraticCurveTo(bx + (sw + T.b) * .3, by - T.h * .6, tx, by - T.h);
+      }
+      x.stroke();
+    }
+    /* shadows, then resting leaves, then leaves in the air */
+    for (i = 0; i < this.leaves.length; i++) {
+      L = this.leaves[i]; if (L.wait > 0) continue;
+      var sh = L.len * (1.05 + L.z * .006), off = 1.5 + L.z * .35;
+      x.globalAlpha = (L.z > 0 ? Math.max(.12, .5 - L.z * .004) : .5) * L.fade;
+      x.drawImage(shadowSpr, L.x - sh / 2 + off * .6, L.y - sh / 2 + off, sh, sh);
+    }
+    for (var pass = 0; pass < 2; pass++) {
+      for (i = 0; i < this.leaves.length; i++) {
+        L = this.leaves[i]; if (L.wait > 0 || (pass === 0) !== (L.z <= 0)) continue;
+        var cf = Math.cos(L.f), ca = Math.cos(L.a), sa = Math.sin(L.a), sc = L.len / (SPR * .84);
+        var sy = sc * (Math.abs(cf) < .08 ? .08 * (cf < 0 ? -1 : 1) : cf);
+        x.globalAlpha = L.fade;
+        x.setTransform(ca * sc * d, sa * sc * d, -sa * sy * d, ca * sy * d, L.x * d, (L.y - L.z) * d);
+        x.drawImage(cf >= 0 ? sprites[L.s].f : sprites[L.s].b, -SPR / 2, -SPR / 2);
+      }
+    }
+    x.globalAlpha = 1;
+  };
+
+  /* ---- Snow bank scene: flakes fall and pile up; drag to shovel ---- */
+  function SnowBank(cv, o){
+    this.cv = cv; this.o = o; this.x = cv.getContext('2d'); this.W = 0; this.H = 0; this.d = 1;
+    this.lastUser = -1e4; this.sweep = -3; this.prev = null; this.visible = true; this.chunks = [];
+    this.build();
+  }
+  SnowBank.prototype.build = function(){
+    if (!fit(this) && this.h) return;
+    var W = this.W, H = this.H, i;
+    this.COL = 4; this.n = Math.ceil(W / this.COL) + 2;
+    this.MAX = H * .52; this.MIN = 12;
+    this.h = new Float32Array(this.n);
+    for (i = 0; i < this.n; i++) { var px = i * this.COL; this.h[i] = H * .26 + 7 * Math.sin(px * .013 + 2) + 4 * Math.sin(px * .041); }
+    var N = isDesk() ? SNOW_FLAKES_DESK : SNOW_FLAKES;
+    this.flakes = [];
+    for (i = 0; i < N; i++) this.flakes.push(this.newFlake(true));
+    this.chunks = []; this.prev = null;
+  };
+  SnowBank.prototype.newFlake = function(any){
+    return { x: Math.random() * this.W, y: any ? Math.random() * this.H : rnd(-10, 8), r: rnd(1.1, 3), vy: rnd(16, 42), ph: rnd(0, 6.3), dr: rnd(6, 18) };
+  };
+  SnowBank.prototype.colAt = function(px){ return Math.max(0, Math.min(this.n - 1, Math.round(px / this.COL))); };
+  SnowBank.prototype.add = function(px, amt){
+    var c = this.colAt(px), h = this.h;
+    for (var k = -6; k <= 6; k++) { var j = c + k; if (j < 0 || j >= this.n) continue; h[j] = Math.min(this.MAX, h[j] + amt * (1 - Math.abs(k) / 7) * .24); }
+  };
+  SnowBank.prototype.edgeY = function(px){ return 16 + 5 * Math.sin(px * .009 + .5) + 3 * Math.sin(px * .027 + 2); };
+  SnowBank.prototype.step = function(dt, t){
+    this.build();
+    var W = this.W, H = this.H, h = this.h, i, F;
+    var r = this.cv.getBoundingClientRect(), px = null, py = null, user = false, R = isDesk() ? 54 : 40;
+    if (pointerLive()) { var lx = P.x - r.left, ly = P.y - r.top; if (lx > -R && lx < W + R && ly > -10 && ly < H + 10) { px = lx; py = ly; user = true; this.lastUser = t; } }
+    if (px === null && !reduced && t - this.lastUser > IDLE) {
+      /* an unseen shovel clears a pass every so often */
+      this.sweep += dt;
+      var per = 9, ph = this.sweep % per;
+      if (ph < 3.6) { px = -R + (W + 2 * R) * (ph / 3.6); py = H - h[this.colAt(px)] + 6; R *= .8; }
+    }
+    var pvx = 0, pvy = 0;
+    if (px !== null && this.prev) { pvx = (px - this.prev[0]) / dt; pvy = (py - this.prev[1]) / dt; }
+    this.prev = px === null ? null : [px, py];
+    var speed = Math.min(2000, Math.sqrt(pvx * pvx + pvy * pvy));
+    /* shovel: lower the bank under the pointer and throw the snow aside */
+    if (px !== null && speed > 15) {
+      var c0 = this.colAt(px - R), c1 = this.colAt(px + R), dir = pvx >= 0 ? 1 : -1;
+      for (i = c0; i <= c1; i++) {
+        var cx = i * this.COL, surf = H - h[i];
+        if (py < surf - R * .9) continue;
+        var k = 1 - Math.abs(cx - px) / R; if (k <= 0) continue;
+        var take = Math.min(h[i] - this.MIN, k * speed * .045 * dt * 60 * .5);
+        if (take <= 0) continue;
+        h[i] -= take;
+        if (Math.random() < take * .5 && this.chunks.length < 260) this.chunks.push({ x: cx, y: surf, vx: dir * rnd(60, 220) + pvx * .25, vy: -rnd(90, 260), r: rnd(1.6, 3.6), m: take * 2 });
+      }
+    }
+    /* flakes */
+    for (i = 0; i < this.flakes.length; i++) {
+      F = this.flakes[i];
+      F.y += F.vy * dt; F.x += Math.sin(t * 1.3 + F.ph) * F.dr * dt;
+      if (px !== null) { var fdx = F.x - px, fdy = F.y - py, fd = fdx * fdx + fdy * fdy; if (fd < R * R * 1.6) { F.x += (fdx > 0 ? 1 : -1) * 40 * dt + pvx * .02 * dt * 10; } }
+      var col = this.colAt(F.x);
+      if (F.y >= H - h[col]) { this.add(F.x, F.r * .9); this.flakes[i] = this.newFlake(false); }
+      else if (F.x < -5) F.x += W + 10; else if (F.x > W + 5) F.x -= W + 10;
+    }
+    /* thrown chunks */
+    for (i = this.chunks.length - 1; i >= 0; i--) {
+      var C = this.chunks[i];
+      C.vy += 620 * dt; C.vx *= Math.exp(-1.5 * dt); C.x += C.vx * dt; C.y += C.vy * dt;
+      if (C.x < -10 || C.x > W + 10) { this.chunks.splice(i, 1); continue; }
+      if (C.vy > 0 && C.y >= H - h[this.colAt(C.x)]) { this.add(C.x, C.r * 1.4 + C.m); this.chunks.splice(i, 1); }
+    }
+    /* snow settles: smooth the bank a little each frame */
+    var a = Math.min(1, dt * 3);
+    for (var it = 0; it < 3; it++) for (i = 1; i < this.n - 1; i++) h[i] += (h[i - 1] + h[i + 1] - 2 * h[i]) * .3 * a;
+    this.draw(t);
+  };
+  SnowBank.prototype.draw = function(t){
+    var x = this.x, d = this.d, W = this.W, H = this.H, h = this.h, i;
+    x.setTransform(d, 0, 0, d, 0, 0); x.clearRect(0, 0, W, H);
+    /* flakes (behind the top edge so they come out from under it) */
+    x.fillStyle = 'rgba(255,255,255,.92)';
+    x.beginPath();
+    for (i = 0; i < this.flakes.length; i++) { var F = this.flakes[i]; x.moveTo(F.x + F.r, F.y); x.arc(F.x, F.y, F.r, 0, 6.2832); }
+    for (i = 0; i < this.chunks.length; i++) { var C = this.chunks[i]; x.moveTo(C.x + C.r, C.y); x.arc(C.x, C.y, C.r, 0, 6.2832); }
+    x.fill();
+    /* the oat band above ends in a soft organic edge */
+    x.fillStyle = this.o.topColor; x.beginPath(); x.moveTo(0, 0); x.lineTo(W, 0);
+    for (var ex = W; ex >= 0; ex -= 10) x.lineTo(ex, this.edgeY(ex));
+    x.lineTo(0, this.edgeY(0)); x.closePath(); x.fill();
+    /* the bank: body shaded from bright crest down into the snow band */
+    var g = x.createLinearGradient(0, H - this.MAX, 0, H);
+    g.addColorStop(0, '#ffffff'); g.addColorStop(.55, '#f6f9fb'); g.addColorStop(1, this.o.bankColor);
+    x.fillStyle = g; x.beginPath(); x.moveTo(0, H + 1); x.lineTo(0, H - h[0]);
+    for (i = 1; i < this.n - 1; i++) { var xc = i * this.COL, xn = (i + 1) * this.COL; x.quadraticCurveTo(xc, H - h[i], (xc + xn) / 2, H - (h[i] + h[i + 1]) / 2); }
+    x.lineTo(W, H - h[this.n - 1]); x.lineTo(W, H + 1); x.closePath();
+    x.shadowColor = 'rgba(70,105,125,.35)'; x.shadowBlur = 10; x.shadowOffsetY = -2;
+    x.fill(); x.shadowColor = 'transparent';
+  };
+
+  /* ---- Shared loop: one rAF, scenes pause off screen ---- */
+  var scenes = window.__yardScenes = [], running = false, last = 0;
+  function tick(ts){
+    var dt = Math.min(.05, (ts - last) / 1000 || .016); last = ts;
+    var any = false, t = ts / 1000;
+    for (var i = 0; i < scenes.length; i++) if (scenes[i].visible) { scenes[i].step(dt, t); any = true; }
+    if (any) requestAnimationFrame(tick); else running = false;
+  }
+  function wake(){ if (!running && !reduced) { running = true; last = performance.now(); requestAnimationFrame(tick); } }
+  function add(scene){
+    scenes.push(scene);
+    if (reduced) { scene.step(0.016, 1); return; }
+    if ('IntersectionObserver' in window) new IntersectionObserver(function(es){ scene.visible = es[0].isIntersecting; if (scene.visible) wake(); }, { rootMargin: '80px' }).observe(scene.cv);
+  }
+  if (reduced) addEventListener('resize', function(){ scenes.forEach(function(s){ s.step(0.016, 1); }); });
+
+  var hero = document.getElementById('heroLeaves');
+  if (hero) {
+    var copy = document.querySelector('.hero-copy'), hint = document.querySelector('.rake-hint');
+    add(new LeafLawn(hero, {
+      autoplay: true, edgeColor: v('--oat'),
+      lawnH: function(W, H){ var hit = document.querySelector('.lawn-hit'); return Math.round(hit.getBoundingClientRect().height); },
+      clearX: function(){ if (!isDesk()) return null; var r = copy.querySelector('h1').getBoundingClientRect(); var p = copy.querySelector('.promise').getBoundingClientRect(); return Math.max(r.right, p.right) - hero.getBoundingClientRect().left + 40; },
+      onTouch: function(){ if (hint && P.type !== 'mouse') hint.classList.add('gone'); }
+    }));
+    if (hint) setTimeout(function(){ hint.classList.add('gone'); }, 9000);
+  }
+  var snow = document.getElementById('snowBank');
+  if (snow) add(new SnowBank(snow, { topColor: v('--oat'), bankColor: v('--snow') }));
+  var close = document.getElementById('closeLeaves');
+  if (close) add(new LeafLawn(close, { autoplay: true, edgeColor: v('--forest-deep'), density: .8, lawnH: function(W, H){ return H - 16; } }));
+  wake();
+})();
+</script>
+</body>
+</html>
